@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>150</width>
-    <height>300</height>
+    <height>297</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -19,21 +19,70 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QWidget#buttonWidget{
+    background-color:#454545;
+}
+
+QListWidget {
+    background-color:transparent;
+    border:0px;
+    
+}
+
+QPushButton {
+    background-color: transparent;
+    border: 0px;
+    border-radius: 5px;
+    color:white;
+}
+
+QPushButton:disabled {
+    background-color: #424242;
+    border: 0px;
+    border-radius: 5px;
+    color: #7C7C7C;
+}
+
+QPushButton:hover {
+    background-color: #9B9B9B;
+    border: 0px;
+    border-radius: 5px;
+}
+
+QPushButton#addButton {
+    background-image: url(:/Main/add);
+}
+
+QPushButton#removeButton {
+    background-image: url(:/Main/remove);
+}
+
+QPushButton#moveUpButton {
+    background-image: url(:/Main/move-up);
+}
+
+QPushButton#moveDownButton {
+    background-image: url(:/Main/move-down);
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
    </property>
    <property name="leftMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="topMargin">
-    <number>5</number>
+    <number>1</number>
    </property>
    <property name="rightMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>5</number>
+    <number>0</number>
    </property>
    <item>
     <widget class="QListWidget" name="listWidget"/>
@@ -43,13 +92,13 @@
      <property name="minimumSize">
       <size>
        <width>0</width>
-       <height>40</height>
+       <height>32</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>16777215</width>
-       <height>40</height>
+       <height>32</height>
       </size>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -72,18 +121,18 @@
        <widget class="QPushButton" name="addButton">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="text">
-         <string>+</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -91,18 +140,18 @@
        <widget class="QPushButton" name="removeButton">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="text">
-         <string>-</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -135,18 +184,18 @@
        <widget class="QPushButton" name="moveUpButton">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="text">
-         <string>up</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -154,18 +203,18 @@
        <widget class="QPushButton" name="moveDownButton">
         <property name="minimumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>25</width>
-          <height>25</height>
+          <width>24</width>
+          <height>24</height>
          </size>
         </property>
         <property name="text">
-         <string>dw</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -187,6 +236,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../Raina.qrc"/>
+ </resources>
  <connections/>
 </ui>

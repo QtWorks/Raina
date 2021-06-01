@@ -6,13 +6,11 @@ project(NotifyEvent C CXX)
 find_package(Qt5 COMPONENTS Core REQUIRED)
 
 set(NotifyEvent_SOURCES
-    ChangeManager.cpp
     NotifyEvent.cpp
     Observer.cpp
    )
 
 set(NotifyEvent_HEADERS
-     ChangeManager.h
      NotifyEvent.h
      Observer.h
     )

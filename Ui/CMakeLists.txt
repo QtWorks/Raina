@@ -29,29 +29,33 @@ endif()
 set(Ui_SOURCES
     MainWindow.cpp
     ScreenWidget.cpp
-    PropertyWidget.cpp
+    CurrentSourceInfoWidget.cpp
     DockWidget/SceneWidget.cpp
     DockWidget/SourceWidget.cpp
     DockWidget/AudioMixerWidget.cpp
     DockWidget/Controlwidget.cpp
+    Dialog/SettingDialog.cpp
    )
 
 set(Ui_HEADERS
     MainWindow.h
     ScreenWidget.h
-    PropertyWidget.h
+    CurrentSourceInfoWidget.h
     DockWidget/SceneWidget.h
     DockWidget/SourceWidget.h
     DockWidget/AudioMixerWidget.h
     DockWidget/ControlWidget.h
+    Dialog/SettingDialog.h
     )
 
 set(Ui_UI
     MainWindow.ui
+    CurrentSourceInfoWidget.ui
     DockWidget/SceneWidget.ui
     DockWidget/SourceWidget.ui
     DockWidget/AudioMixerWidget.ui
     DockWidget/ControlWidget.ui
+    Dialog/SettingDialog.ui
     )
 
 add_library(Ui

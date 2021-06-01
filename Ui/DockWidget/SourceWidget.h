@@ -4,7 +4,7 @@
 
 #include <qwidget.h>
 #include "../NotifyEvent/Observer.h"
-
+#include "../Chain/Chain.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class SourceWidget; }
@@ -12,17 +12,17 @@ QT_END_NAMESPACE
 
 class Scene;
 
-class SourceWidget : public QWidget, public Observer {
+class SourceWidget : public QWidget, public Observer, public Chain {
 
 private:
 	Ui::SourceWidget* ui;
 
 private:
-    Scene* scene;
+    const Scene* scene;
 
 
 public:
-	SourceWidget(QWidget* parent = nullptr);
+	SourceWidget(QWidget* parent = nullptr, Chain* chain = nullptr);
 	~SourceWidget();
 
 	virtual void updateNotifyEvent(NotifyEvent* event);
@@ -35,6 +35,7 @@ private slots:
 	void removeButtonClicked();
 	void moveUpButtonClicked();
 	void moveDownButtonClicked();
+	void listCurrentRowChanged(int row);
 
 private:
 	void updateList();

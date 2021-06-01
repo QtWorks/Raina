@@ -15,12 +15,24 @@ NotifyEvent::~NotifyEvent() {
 /////////////////////////////////////////////////////////////
 
 
-CurrentSceneChangedEvent::CurrentSceneChangedEvent(Scene* const scene)
-	:NotifyEvent(EventType::CurrentSceneChanged), scene(scene) {
+CurrentSceneChangedEvent::CurrentSceneChangedEvent(const QList<const Scene*>& list, const Scene* scene)
+	:NotifyEvent(EventType::CurrentSceneChanged), list(list), scene(scene) {
 
 }
 
 CurrentSceneChangedEvent::~CurrentSceneChangedEvent() {
 
+
+}
+
+
+///////////////////////////////////////////////////////////////
+
+CurrentSourceChangedEvent::CurrentSourceChangedEvent(const Scene* scene, const Source* source)
+	:NotifyEvent(EventType::CurrentSourceChanged), scene(scene), source(source) {
+
+}
+
+CurrentSourceChangedEvent::~CurrentSourceChangedEvent() {
 
 }
